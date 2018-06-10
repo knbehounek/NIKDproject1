@@ -1,0 +1,46 @@
+header{
+    width: 100%;
+    height: auto;
+    border: solid blue 2px;
+    margin-bottom: 20px;
+}
+
+#aboutIntro{
+ width: 100%;
+ margin-bottom: 20px;
+}
+
+#movies{
+    border: solid blue 2px;
+    margin-bottom: 20px;
+}
+
+#concerts{
+    border: solid blue 2px;
+    margin-bottom: 20px;
+}
+
+#moviesIntro{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#moviesCard{
+    width: 100%;
+}
+
+#eventsCard{
+    width: 100%;
+}
+
+#concertIntro{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border: solid blue 2px;
+}
