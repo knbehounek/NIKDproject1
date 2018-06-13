@@ -29,6 +29,18 @@ header{
     width: 100%;
 }
 
+#movieOptions {
+    width: 100%; 
+    margin-bottom: 20px;
+}
+
+#concertOptions {
+    width: 100%; 
+    margin-bottom: 20px;
+
+}
+
+
 #eventsCard{
     width: 100%;
 }
