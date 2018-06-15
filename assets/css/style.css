@@ -34,9 +34,14 @@ header{
     margin: 5px;
     height: 300px;
     width: 175px;
-    margin: 10px 20px 0px 20px;
-    
-    
+    margin: 10px 20px 0px 20px;  
+}
+.eachConcert{
+    float: left;
+    margin: 5px;
+    height: 300px;
+    width: 125px;
+    margin: 10px 20px 0px 20px; 
 }
 #movies{
     border: solid blue 2px;
@@ -50,7 +55,15 @@ header{
     margin-bottom: 20px;
     /* margin-right: 15px; */
 }
-
+.concertResults{
+    overflow-y: scroll;
+    background-color: rgb(70, 61, 61);
+    height: 500px;
+    margin: 0px 15px 0px 15px ;
+    color: aliceblue;
+    font-weight: bold;
+    text-align: center;
+} 
 #moviesIntro{
     width: 100%;
     margin-bottom: 20px;
@@ -63,10 +76,7 @@ header{
     /* float: left; */
     overflow-y: scroll;
     justify-content: center;
-    padding: 0;
-    
-  
-    
+    padding: 0; 
 }
 .movieResults{
     overflow-y: scroll;
