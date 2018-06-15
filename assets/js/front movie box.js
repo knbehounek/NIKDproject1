@@ -1,31 +1,42 @@
 //This will bethe information on the home screen that will display current upcoming movies
 var moviesBox = [];
-var queryURL = "https://api.themoviedb.org/3/movie/now_playing?api_key=1c5427c7604f1f024cf4b0d1a135c28e&language=en-US&page=1"
+var queryURLMovies = "https://api.themoviedb.org/3/movie/now_playing?api_key=1c5427c7604f1f024cf4b0d1a135c28e&language=en-US&page=1"
+var queryURLConcerts = 
 
-$(document).ready(function(){
+$(document).ready(function () {
     $.ajax({
-        url: queryURL,
+        url: queryURLMovies,
         method: "GET"
-    }).then(function(response){
+    }).then(function (response) {
         console.log(response);
 
-        var movieDiv = $('<div></div>');
+        var movieInfo = response.results;
+        console.log(movieInfo);
 
-        var movieTitle = response.results[0].title;
-        console.log(movieTitle);
+        for (var i = 0; i < movieInfo.length; i++) {
 
-        var title1 = $('.movieResults').text(movieTitle);
+            var movieDiv = $('<div></div>');
+            movieDiv.addClass('eachMovie');
 
-        movieDiv.append(movieTitle);
+            var voteAverage = movieInfo[i].vote_average;
+            var titleForMovie = $('<p>').text('Vote_Average: ' + voteAverage);
+            console.log(voteAverage);
 
-        var moviePoster = response.results[0].poster_path;
-        console.log(moviePoster);
+           
+            $('movieResults').append(movieDiv);
 
-        $('.movieResults').html(movieDiv);
+            var movieImage = $('<img>');
+            movieImage.addClass('displayPosters');
+            movieImage.attr({src: "http://image.tmdb.org/t/p/w185/" + response.results[i].poster_path});
+            movieDiv.append(movieImage);
+            movieDiv.append(titleForMovie);
 
-        var movieImage = $('<img>');
-        movieImage.attr('src', "http://image.tmdb.org/t/p/w185/" + response.results[0].poster_path);
-        movieDiv.append(movieImage);
+            $('.movieResults').append(movieDiv);
+        }      
+    })
+
+    $('.displayPosters').on('click', function(){
+
 
     })
 })
