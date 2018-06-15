@@ -8,7 +8,8 @@
        * Firebase Console > Overview > Add Firebase to your web app. *
        ***************************************************************************************** -->
        
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+       <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
     <script type="text/javascript">
       // FirebaseUI config.
@@ -35,14 +36,14 @@
             // or whether we leave that to developer to handle.
             return true;
           },
-          signInSuccess: function(currentUser, credential, redirectUrl) {
-            // This callback will be deprecated. `signInSuccessWithAuthResult` should
-            // be used instead.
-            // Do something.
-            // Return type determines whether we continue the redirect automatically
-            // or whether we leave that to developer to handle.
-            return true;
-          },
+        //   signInSuccess: function(currentUser, credential, redirectUrl) {
+        //     // This callback will be deprecated. `signInSuccessWithAuthResult` should
+        //     // be used instead.
+        //     // Do something.
+        //     // Return type determines whether we continue the redirect automatically
+        //     // or whether we leave that to developer to handle.
+        //     return true;
+        //   },
           signInFailure: function(error) {
             // Some unrecoverable error occurred during sign-in.
             // Return a promise when error handling is completed and FirebaseUI
@@ -64,26 +65,26 @@
         queryParameterForSignInSuccessUrl: 'signInSuccessUrl',
         // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
         signInFlow: 'popup',
-        signInSuccessUrl: '<url-to-redirect-to-on-success>',
+        signInSuccessUrl: 'user-auth2.html',
         signInOptions: [
           // Leave the lines as is for the providers you want to offer your users.
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-          firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+        //   firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        //   firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        //   firebase.auth.TwitterAuthProvider.PROVIDER_ID,
           {
             provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
             // Whether the display name should be displayed in the Sign Up page.
             requireDisplayName: true
-          },
-          {
-            provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-            // Invisible reCAPTCHA with image challenge and bottom left badge.
-            recaptchaParameters: {
-              type: 'image',
-              size: 'invisible',
-              badge: 'bottomleft'
-            }
-          }
+          }//,
+        //   {
+        //     provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+        //     // Invisible reCAPTCHA with image challenge and bottom left badge.
+        //     recaptchaParameters: {
+        //       type: 'image',
+        //       size: 'invisible',
+        //       badge: 'bottomleft'
+        //     }
+          //}
         ],
         // Terms of service url.
         tosUrl: '<your-tos-url>'
@@ -97,7 +98,7 @@
   <body>
     <!-- The surrounding HTML is left untouched by FirebaseUI.
          Your app may use that space for branding, controls and other customizations.-->
-    <h1>Welcome to My Awesome App</h1>
+    <h1>Get Local 4 you - Sign In</h1>
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
   </body>
