@@ -1,9 +1,15 @@
-nav-link{
+/* nav-link{
     
     color: aliceblue;
+} */
+
+.nav-link
+{
+    color: snow;
 }
+
 body{
-background-image: url('../Images/maxresdefault.jpg');
+    background-image: url('../Images/congruent_outline.png'); 
 /* background-repeat: no-repeat; */
 /* background-size: cover; */
 
@@ -11,14 +17,13 @@ background-image: url('../Images/maxresdefault.jpg');
 header{
     width: 100%;
     height: 100px;
-    border: solid blue 2px;
+    border: solid grey 2px;
     margin-bottom: 20px;
-    background-color: rgb(138, 91, 91);
- 
+    background-color: transparent; 
     
  } 
  .card-header{
-    background-color: lightgray;  
+    background-color: gray;  
 }
 
 
@@ -39,14 +44,14 @@ header{
     
 }
 #movies{
-    border: solid blue 2px;
+    border: solid grey 2px;
     margin-bottom: 20px;
     padding: 0px;
     background-color: black;
 }
 
 #concerts{
-    border: solid blue 2px;
+    border: solid gray 2px;
     margin-bottom: 20px;
     /* margin-right: 15px; */
 }
