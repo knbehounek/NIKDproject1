@@ -10,8 +10,12 @@ body{
     background-image: url('../Images/congruent_outline.png'); 
 /* background-repeat: no-repeat; */
 /* background-size: cover; */
-
 }
+/* .concertDisplayPosters{
+    height: 200px;
+    width: 205px;
+} */
+
 header{
     width: 100%;
     height: 100px;
@@ -20,7 +24,12 @@ header{
     background-color: transparent; 
  } 
  .card-header{
+
+    background-color: lightgray;  
+    margin: 0px;
+
     background-color: gray;  
+
 }
 
 #aboutIntro{
@@ -28,11 +37,25 @@ header{
  margin-bottom: 20px;
 }
 .eachMovie{
-    float: left;
+    display: flex;
+    flex-wrap: wrap;
     margin: 5px;
     height: 300px;
+
+    width: 100%;
+    margin: 10px 20px 0px 20px;  
+}
+.eachConcert{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    height: 300px;
+    width: 100%;
+    margin: 10px 20px 0px 20px; 
+
     width: 175px;
     margin: 10px 20px 0px 20px;   
+
 }
 #movies{
     
@@ -46,7 +69,16 @@ header{
     margin-bottom: 20px;
     /* margin-right: 15px; */
 }
-
+.concertResults{
+    overflow-y: scroll;
+    background-color: rgb(70, 61, 61);
+    height: 500px;
+    width:100%;
+    margin: 0px;
+    color: aliceblue;
+    font-weight: bold;
+    text-align: center;
+} 
 #moviesIntro{
     width: 100%;
     margin-bottom: 20px;
@@ -59,14 +91,19 @@ header{
     /* float: left; */
     overflow-y: scroll;
     justify-content: center;
+
+    padding: 0; 
+
     padding: 0;
     
+
 }
 
 .movieResults{
     overflow-y: scroll;
     background-color: rgb(70, 61, 61);
     height: 500px;
+    width:100%;
     margin: 0px 15px 0px 15px ;
     color: aliceblue;
     font-weight: bold;
