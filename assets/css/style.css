@@ -6,6 +6,12 @@
 .nav-link
 {
     color: snow;
+    
+}
+
+li .nav-link :hover{
+    color: yellow;
+
 }
 
 body{
@@ -20,26 +26,21 @@ header{
     
     margin-bottom: 20px;
     background-color: transparent; 
-    
  } 
  .card-header{
     background-color: gray;  
 }
 
-
 #aboutIntro{
  width: 100%;
  margin-bottom: 20px;
 }
-
 .eachMovie{
     float: left;
     margin: 5px;
     height: 300px;
     width: 175px;
-    margin: 10px 20px 0px 20px;
-    
-    
+    margin: 10px 20px 0px 20px;   
 }
 #movies{
     
@@ -68,9 +69,8 @@ header{
     justify-content: center;
     padding: 0;
     
-  
-    
 }
+
 .movieResults{
     overflow-y: scroll;
     background-color: rgb(70, 61, 61);
@@ -91,7 +91,6 @@ header{
     margin-bottom: 20px;
 
 }
-
 
 #eventsCard{
     width: 100%;
