@@ -95,8 +95,8 @@ header{
 
 footer {
     color: floralwhite;
-    position: bottom;
-    bottom: 10;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     text-align: center;
     border: solid grey 2px;
