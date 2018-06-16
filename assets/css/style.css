@@ -3,16 +3,8 @@
     color: aliceblue;
 } */
 
-.nav-link
-{
-    color: snow;
-    
-}
 
-li .nav-link :hover{
-    color: yellow;
 
-}
 
 body{
     background-image: url('../Images/congruent_outline.png'); 
