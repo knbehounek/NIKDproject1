@@ -62,7 +62,6 @@ header{
     height: 300px;
     width: 100%;
     margin: 10px 20px 0px 20px; 
-
     width: 175px;
     margin: 10px 20px 0px 20px;   
 
@@ -88,6 +87,8 @@ header{
     color: aliceblue;
     font-weight: bold;
     text-align: center;
+    align-items: center;
+    justify-content: baseline;
 } 
 #moviesIntro{
     width: 100%;
@@ -118,6 +119,7 @@ header{
     color: aliceblue;
     font-weight: bold;
     text-align: center;
+    align-items: center;
 } 
 
 #movieOptions {
