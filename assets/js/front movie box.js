@@ -23,6 +23,8 @@ $(document).ready(function () {
     return arrOfObj
   }
 
+  //Appends Movie Posters with click events to index
+
   $.ajax({
     url: queryURLMovies,
     method: "GET"
@@ -76,6 +78,8 @@ $(document).ready(function () {
     })
 
   })
+
+  //Appends the Concerts to the Index html
 
   $.ajax({
     type: "GET",

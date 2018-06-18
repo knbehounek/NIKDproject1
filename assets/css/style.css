@@ -31,6 +31,16 @@ header{
     background-color: gray;  
 
 }
+.searchRow {
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-bottom: 20px
+}
+
+.searchButton {
+    color: aliceblue;
+    border: solid 2px aliceblue;
+}
 
 #aboutIntro{
  width: 100%;
@@ -52,7 +62,6 @@ header{
     height: 300px;
     width: 100%;
     margin: 10px 20px 0px 20px; 
-
     width: 175px;
     margin: 10px 20px 0px 20px;   
 
@@ -78,6 +87,8 @@ header{
     color: aliceblue;
     font-weight: bold;
     text-align: center;
+    align-items: center;
+    justify-content: baseline;
 } 
 #moviesIntro{
     width: 100%;
@@ -108,6 +119,7 @@ header{
     color: aliceblue;
     font-weight: bold;
     text-align: center;
+    align-items: center;
 } 
 
 #movieOptions {
@@ -130,9 +142,18 @@ header{
     margin-bottom: 20px;
 }
 
+.scroller{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+
+
 footer {
+    margin-top: 30px;
     color: floralwhite;
-    position: absolute;
+    position: static;
     bottom: 0;
     width: 100%;
     text-align: center;
