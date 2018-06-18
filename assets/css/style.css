@@ -90,6 +90,20 @@ header{
     align-items: center;
     justify-content: baseline;
 } 
+
+.concertHTML{
+    overflow-y: scroll;
+    background-color: rgb(70, 61, 61);
+    height: 500px;
+    width:100%;
+    margin: 0px;
+    color: aliceblue;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: baseline;
+} 
+
 #moviesIntro{
     width: 100%;
     margin-bottom: 20px;
@@ -111,6 +125,18 @@ header{
 }
 
 .movieResults{
+    overflow-y: scroll;
+    background-color: rgb(70, 61, 61);
+    height: 500px;
+    width:100%;
+    margin: 0px 15px 0px 15px ;
+    color: aliceblue;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+}
+
+.movieHTML{
     overflow-y: scroll;
     background-color: rgb(70, 61, 61);
     height: 500px;
