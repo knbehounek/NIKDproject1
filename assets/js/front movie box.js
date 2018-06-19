@@ -149,4 +149,8 @@ $(document).ready(function () {
       //          }
     }
   })
+
+  $('#concertSearch').on('click', function (){
+    console.log('fire');
+  })
 })
