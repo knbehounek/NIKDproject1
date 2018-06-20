@@ -21,6 +21,8 @@ var config = {
 };
 firebase.initializeApp(config);
 
+
+
 $(document).ready(function () {
   console.log("ready!");
 
@@ -36,8 +38,8 @@ $(document).ready(function () {
       document.getElementById("not_signed_in").innerHTML = "";
       document.getElementById("id_button").innerHTML = '<button onclick="logout()" id="id_signout">Logoff</button>';
 
-      document.getElementById("id_private_movies").style.display = "block";
-      document.getElementById("id_private_concerts").style.display = "block";
+      document.getElementById("id_private_section").style.display = "block";
+      // document.getElementById("id_private_section").style.display = "block";
 
     } else {
       document.getElementById("is_signed_in").innerHTML = "";
@@ -46,8 +48,8 @@ $(document).ready(function () {
       document.getElementById("not_signed_in").innerHTML = "Not Signed in";
       document.getElementById("id_button").innerHTML = "";
 
-      document.getElementById("id_private_movies").style.display = "none";
-      document.getElementById("id_private_concerts").style.display = "none";
+      document.getElementById("id_private_section").style.display = "none";
+      // document.getElementById("id_private_section").style.display = "none";
 
 
       // No user is signed in.
@@ -79,6 +81,23 @@ function login() {
     var errorMessage = error.message;
     // ...
     window.alert("Error Message: " + error.code + "  " + error.message);
+  });
+
+  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+  .then(function () {
+    // Existing and future Auth states are now persisted in the current
+    // session only. Closing the window would clear any existing state even
+    // if a user forgets to sign out.
+    // ...
+    // New sign-in will be persisted with session persistence.
+    return firebase.auth().signInWithEmailAndPassword(user_email, user_password);
+  })
+  .catch(function (error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+
+    window.alert("Error MSG: " + errorMessage);
   });
 }
 
