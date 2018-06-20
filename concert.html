@@ -57,11 +57,10 @@
     <div class="container">
         <div class="row">
             <div class="card" id="concertIntro">
-                <div class="card-header">
+                <div class="card-header" id="cardHeader">
                     Whose singing what and where?
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 </div>
             </div>
@@ -74,11 +73,10 @@
         </div>
         <div class="row">
             <div class="card" id="concertOptions">
-                <div class="card-header">
+                <div class="card-header" id="cardHeader">
                     Concerts and Events
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
                     <div class="concertHTML scroller">
                     </div>
                 </div>
@@ -86,21 +84,20 @@
         </div>
         <div class="row" id="id_private_section"></div>
             <div class="card" id="eventsCard">
-                <div class="card-header">
+                <div class="card-header" id="cardHeader">
                     Current and Upcoming Events
                 </div>
                 <div class="card-body">
                     <table class="table" id='eventsTable'>
                         <thead>
                             <tr>
-                                <th>Artist</th>
-                                <th>Genre</th>
+                                <th>Event</th>
+                                <th>Type</th>
                                 <th>Event Date</th>
                                 <th>Location</th>
-                                <th>Youtube Link</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="concertdata">
                         </tbody>
                     </table>
                 </div>

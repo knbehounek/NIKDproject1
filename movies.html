@@ -57,11 +57,10 @@
     <div class="container">
         <div class="row">
             <div class="card" id="moviesIntro">
-                <div class="card-header">
+                <div class="card-header" id="cardHeader">
                     When, Where, What Movies.
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 </div>
             </div>
@@ -74,20 +73,22 @@
         </div>
         <div class="row">
             <div class="card" id="movieOptions">
-                <div class="card-header">
+                <div class="card-header" id="cardHeader">
                     Current and Upcoming Movies
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
                     <div class="animated wobble movieHTML scroller" data-wow-delay="0.2s;">
                     </div>
                 </div>
             </div>
         </div>
 
+
+
         <div class="row" id="id_private_section">
             <div class="card" id="eventsCard">
-                <div class="card-header">
+                <div class="card-header" id="cardHeader">
+                  
                     Movies List
                 </div>
                 <div class="card-body">
@@ -98,10 +99,9 @@
                                 <th>Rating</th>
                                 <th>Release Date</th>
                                 <th>Synopsis</th>
-                                <th>Trailer</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="moviedata">
                         </tbody>
                     </table>
                 </div>

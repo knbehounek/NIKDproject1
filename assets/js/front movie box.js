@@ -170,6 +170,7 @@ $(document).ready(function () {
 
       var voteAverage = movieInfo[i].vote_average;
       var titleForMovie = $('<p>').text('Vote_Average: ' + voteAverage);
+      titleForMovie.addClass('movieTitle')
       console.log(voteAverage);
 
 
@@ -183,13 +184,42 @@ $(document).ready(function () {
       console.log("Movie Id" + movieInfo[i].id);
      
       var moviebutton = $('<input type="button" value="Add to Movie List" />');
+      moviebutton.addClass('movieaddButton');
+      moviebutton.data("name", movieInfo[i].id)
       moviebutton.appendTo($(movieDiv));
 
       movieDiv.append(movieImage);
       movieDiv.append(titleForMovie);
       $('.movieHTML').append(movieDiv);
+
+
+      
     }
+
+    $(".movieaddButton").on("click", function () {
+      console.log(this);
+      var url2 = "https://api.themoviedb.org/3/movie/" + $(this).data("name") + "?api_key=1c5427c7604f1f024cf4b0d1a135c28e&language=en-US"
+      $.ajax({
+        url: url2,
+        method: "GET"
+      }).then(function (response) {
+        var movietitle = response.title
+        var movierating = response.vote_average
+        var movierelease = response.release_date
+        var movieoverview = response.overview
+       console.log(movietitle);
+       console.log(movierating);
+       console.log(movierelease);
+       console.log(movieoverview);
+
+       $("#moviedata").append("<tr><td>" + movietitle + "</td><td>" + movierating + "</td><td>" + movierelease + "</td><td>" + movieoverview+ "</td><td>");
+        
+      })
+    })
   })
+
+
+  
   //Concert html
   $.ajax({
     type: "GET",
@@ -238,6 +268,8 @@ $(document).ready(function () {
 
 
         var concertbutton = $('<input type="button" value="Add to Concert List" />');
+        concertbutton.addClass('concertaddButton');
+        concertbutton.attr('name2', filteredConcertInfo[i].id);
         concertbutton.appendTo($(concertDiv));
 
         imgDiv.append(imageLink);
@@ -264,9 +296,37 @@ $(document).ready(function () {
         // }
         $('.concertHTML').append(concertDiv);
       }
+
+      $(".concertaddButton").on("click", function () {
+        console.log(this);
+        var url2 = "https://app.ticketmaster.com/discovery/v2/events/" + $(this).attr("name2") + ".json?&apikey=b8OAoL9Cio2JXSXZxlJ0ZAeGr2k0iwVL"
+        $.ajax({
+          url: url2,
+          method: "GET"
+        }).then(function (response) {
+          console.log(response);
+          var concertname =response.name
+          var concerttype =response.type
+          var concertdate =response.dates.start.localDate
+          var concertlocation = response.dates.timezone
+          console.log(concertname);
+          console.log(concerttype);
+          console.log(concertdate);
+          console.log(concertlocation);
+
+          $("#concertdata").append("<tr><td>" + concertname + "</td><td>" + concerttype + "</td><td>" + concertdate + "</td><td>" + concertlocation+ "</td><td>");
+        })
+      })
       // error: function(xhr, status, err) {
       //             // This time, we do not end up here!
       //          }
     }
   })
+
+ 
+
+
+
+
+  
 })

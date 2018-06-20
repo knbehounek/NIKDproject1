@@ -31,6 +31,13 @@ header{
     background-color: gray;  
 
 }
+
+#cardHeader {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;  
+}
+
 .searchRow {
     margin-left: 33%;
     margin-right: 33%;
@@ -59,11 +66,14 @@ header{
     display: flex;
     flex-wrap: wrap;
     margin: 5px;
-    height: 300px;
-    width: 100%;
-    margin: 10px 20px 0px 20px; 
-    width: 175px;
-    margin: 10px 20px 0px 20px;   
+    height: 321px;
+    width: 300px;
+    margin: 10px 20px 0px 20px;
+    width: 233px;
+    flex-direction: column;
+    margin: 10px 20px 0px 20px;
+    align-items: unset;
+    justify-content: space-between;   
 
 }
 #movies{
@@ -71,6 +81,11 @@ header{
     margin-bottom: 20px;
     padding: 0px;
     background-color: black;
+}
+
+.movieTitle {
+    color: aliceblue;
+    margin-left: 13%;
 }
 
 #concerts{
@@ -103,6 +118,24 @@ header{
     align-items: center;
     justify-content: baseline;
 } 
+
+.concertaddButton {
+ color: aliceblue;
+ background-color: rgb(70, 61, 61);
+ font-weight:bold;
+ margin-left: 13%;
+ margin-bottom: 15px;
+ 
+}
+
+.movieaddButton {
+color: aliceblue;
+background-color: rgb(70, 61, 61);
+font-weight:bold;
+margin-left: 13%;
+margin-bottom: 15px;
+
+}
 
 #moviesIntro{
     width: 100%;
