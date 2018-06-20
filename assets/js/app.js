@@ -38,10 +38,6 @@ $(document).ready(function () {
       // document.getElementById("id_private_section").style.display = "block";
 
     } else {
-      document.getElementById("is_signed_in").innerHTML = "";
-      document.getElementById("public_content").innerHTML = "Stuff the public can see";
-      document.getElementById("member_content").innerHTML = "";
-      document.getElementById("not_signed_in").innerHTML = "Not Signed in";
       document.getElementById("id_button").innerHTML = "";
 
       document.getElementById("id_private_section").style.display = "none";

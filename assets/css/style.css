@@ -16,11 +16,11 @@ body{
 
 header{
     width: 100%;
-    height: 100px;
-    
-    margin-bottom: 20px;
+    padding-bottom: 50px;
     background-color: transparent; 
  } 
+
+
  .card-header{
 
     background-color: lightgray;  
@@ -43,11 +43,30 @@ header{
     margin-bottom: 20px
 }
 
+#loginButton{
+    color: aliceblue;
+    border: solid 2px aliceblue;
+    background-color: gray; 
+}
+
+#id_signout{
+    margin-left: 5px;
+    color: aliceblue;
+    border: solid 2px aliceblue;
+    background-color: gray; 
+}
+
 .searchButton {
     color: aliceblue;
     border: solid 2px aliceblue;
 }
 
+.indexsearchButton {
+    margin-top: 25px;
+    color: aliceblue;
+    border: solid 2px aliceblue;
+    background-color: gray; 
+}
 #aboutIntro{
  width: 100%;
  margin-bottom: 20px;
@@ -219,3 +238,29 @@ footer {
     border: solid grey 2px;
 
 } 
+#loginButton:hover{
+    padding: 5px;
+    color: aliceblue;
+    border: solid 2px aliceblue;
+    background-color: rgb(49, 49, 49); 
+}
+
+#id_signout:hover{
+    padding: 5px;
+    color: aliceblue;
+    border: solid 2px aliceblue;
+    background-color: rgb(49, 49, 49); 
+}
+
+.searchButton:hover {
+    color: aliceblue;
+    border: solid 2px aliceblue;
+    background-color: rgb(49, 49, 49); 
+}
+
+.indexsearchButton:hover {
+    margin-top: 25px;
+    color: aliceblue;
+    border: solid 2px aliceblue;
+    background-color: rgb(49, 49, 49); 
+}
