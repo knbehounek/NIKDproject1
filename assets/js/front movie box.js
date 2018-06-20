@@ -202,7 +202,7 @@ $(document).ready(function () {
         movieDiv.addClass('eachMovie');
 
         var voteAverage = movieInfo[i].vote_average;
-        var titleForMovie = $('<p>').text('Peer Rating ot of 10: ' + voteAverage);
+        var titleForMovie = $('<p>').text('Peer Rating out of 10: ' + voteAverage);
         console.log(voteAverage);
 
 

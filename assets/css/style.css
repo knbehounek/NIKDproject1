@@ -4,8 +4,6 @@
 } */
 
 
-
-
 body{
     background-image: url('../Images/congruent_outline.png'); 
 /* background-repeat: no-repeat; */
@@ -32,6 +30,7 @@ header{
 
 }
 
+
 #cardHeader {
     font-weight: bold;
     font-size: 20px;
@@ -53,6 +52,7 @@ header{
  width: 100%;
  margin-bottom: 20px;
 }
+
 .eachMovie{
     display: flex;
     flex-wrap: wrap;

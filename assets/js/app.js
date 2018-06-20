@@ -32,10 +32,6 @@ $(document).ready(function () {
       //STORE USER IN SESSION
 
       // User is signed in.
-      document.getElementById("is_signed_in").innerHTML = "signed in";
-      document.getElementById("public_content").innerHTML = "Stuff the public can see";
-      document.getElementById("member_content").innerHTML = "Only Signed USers can see this stuff!";
-      document.getElementById("not_signed_in").innerHTML = "";
       document.getElementById("id_button").innerHTML = '<button onclick="logout()" id="id_signout">Logoff</button>';
 
       document.getElementById("id_private_section").style.display = "block";
