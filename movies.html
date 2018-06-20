@@ -32,6 +32,23 @@
                         </li>
                     </ul>
                 </div>
+                <div id="login_stuff">
+                    <!-- <input type="text" name="" id=""> -->
+                    <input type="email" name="email" id="id_email" placeholder="Email" />
+                    <input type="password" name="password" id="id_password" placeholder="Password" />
+                    <button onclick="login()">LOGIN</button>
+                </div>
+                <div></div>
+
+                <div class="text-white">
+                    <div id="is_signed_in"></div>
+                    <div id="not_signed_in"></div>
+                    <div></div>
+                    <div id="public_content"></div>
+                    <div id="member_content"></div>
+
+                    <div id="id_button"></div>
+                </div>
             </nav>
         </div>
     </header>
@@ -66,9 +83,12 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="card" id="moviesCard">
+
+
+        <div class="row" id="id_private_section">
+            <div class="card" id="eventsCard">
                 <div class="card-header" id="cardHeader">
+                  
                     Movies List
                 </div>
                 <div class="card-body">
@@ -87,19 +107,18 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--Footer-->
-    <footer class="footer">
-        Copyright ©
-    </footer>
+        <!--Footer-->
+        <footer class="footer">
+            Copyright ©
+        </footer>
 
-    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/front movie box.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/front movie box.js"></script>
 
 </body>
 
