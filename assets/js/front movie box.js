@@ -149,7 +149,7 @@ $(document).ready(function () {
           var imageLink = $('<a>').attr('href', filteredConcertInfo[i].url);
           imageLink.attr('target', "_blank");
 
-          concertImage.addClass('concertDisplayPosters');
+          concertImage.addClass('concertDisplayPosters hvr-bob');
           concertImage.attr('concertId', filteredConcertInfo[i]);
           console.log("ATTRACTIONS", filteredConcertInfo[i]);
           imageLink.html(concertImage);
@@ -203,6 +203,7 @@ $(document).ready(function () {
 
         var voteAverage = movieInfo[i].vote_average;
         var titleForMovie = $('<p>').text('Peer Rating out of 10: ' + voteAverage);
+        var voteScore = $('<p>').text();
         console.log(voteAverage);
 
 
@@ -210,7 +211,7 @@ $(document).ready(function () {
 
         var movieImage = $('<img>');
 
-        movieImage.addClass('displayPosters');
+        movieImage.addClass('displayPosters hvr-pulse');
         movieImage.attr({ src: "http://image.tmdb.org/t/p/w185/" + movieInfo[i].poster_path });
         movieImage.attr("movieId", movieInfo[i].id);
         console.log("Movie Id" + movieInfo[i].id);
@@ -285,7 +286,7 @@ $(document).ready(function () {
           imageLink.attr('target', "_blank");
 
 
-          concertImage.addClass('concertDisplayPosters');
+          concertImage.addClass('concertDisplayPosters hvr-pulse');
           concertImage.attr('concertId', filteredConcertInfo[i]);
           console.log("ATTRACTIONS", filteredConcertInfo[i]);
           imageLink.html(concertImage);
@@ -344,7 +345,7 @@ $(document).ready(function () {
 
       var movieImage = $('<img>');
 
-      movieImage.addClass('displayPosters');
+      movieImage.addClass('displayPosters hvr-pulse');
       movieImage.attr({ src: "http://image.tmdb.org/t/p/w185/" + movieInfo[i].poster_path });
       movieImage.attr("movieId", movieInfo[i].id);
       console.log("Movie Id" + movieInfo[i].id);
@@ -384,8 +385,6 @@ $(document).ready(function () {
     })
   })
 
-
-  
   //Concert html
   $.ajax({
     type: "GET",
@@ -424,7 +423,7 @@ $(document).ready(function () {
         var imageLink = $('<a>').attr('href', filteredConcertInfo[i].url);
         imageLink.attr('target', "_blank");
 
-        concertImage.addClass('concertDisplayPosters');
+        concertImage.addClass('concertDisplayPosters hvr-pulse');
         concertImage.attr('concertId', filteredConcertInfo[i]);
         console.log("ATTRACTIONS", filteredConcertInfo[i]);
         imageLink.html(concertImage);
