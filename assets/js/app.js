@@ -19,45 +19,62 @@ var config = {
   storageBucket: "gualafon-9f430.appspot.com",
   messagingSenderId: "944780830840"
 };
+
 firebase.initializeApp(config);
 
 
 
+// console.log("876543" + user);
+// console.log("ready!");
 $(document).ready(function () {
-  console.log("ready!");
 
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
+      console.log("right after statechange, if user, user: " + user.uid);
 
       //STORE USER IN SESSION
 
       // User is signed in.
-      document.getElementById("is_signed_in").innerHTML = "signed in";
-      document.getElementById("public_content").innerHTML = "Stuff the public can see";
-      document.getElementById("member_content").innerHTML = "Only Signed USers can see this stuff!";
-      document.getElementById("not_signed_in").innerHTML = "";
+      document.getElementById("is_signed_in").innerHTML = "signed in as " + user.email;
+      // document.getElementById("public_content").innerHTML = "Stuff the public can see";
+      // document.getElementById("member_content").innerHTML = "Only Signed USers can see this stuff!";
+      document.getElementById("not_signed_in").style.display = "none";
       document.getElementById("id_button").innerHTML = '<button onclick="logout()" id="id_signout">Logoff</button>';
 
-      document.getElementById("id_private_section").style.display = "block";
-      // document.getElementById("id_private_section").style.display = "block";
+      // var uuu = $("#id_private_parts").length;
+      // console.log("lenth  "+uuu);
+      if ($("#id_private_parts").length) {
+        document.getElementById("id_private_parts").style.display = "block";
+      }
+      // document.getElementById("id_private_con").style.display = "block";
+      // console.log("logged in" + user);
+
+      document.getElementById("login_stuff").style.display = "none";
+      // location.reload(true);
 
     } else {
-      document.getElementById("is_signed_in").innerHTML = "";
-      document.getElementById("public_content").innerHTML = "Stuff the public can see";
-      document.getElementById("member_content").innerHTML = "";
+      console.log("right after statechange, if notuser, user: " + user);
+      // var uuu = $("#id_private_parts").length;
+      // console.log("lngth  "+uuu);
+      // document.getElementById("is_signed_in").innerHTML = "";
+      // document.getElementById("public_content").innerHTML = "Stuff the public can see";
+      // document.getElementById("member_content").innerHTML = "";
       document.getElementById("not_signed_in").innerHTML = "Not Signed in";
-      document.getElementById("id_button").innerHTML = "";
+      document.getElementById("id_button").style.display = "none";
+      document.getElementById("login_stuff").style.display = "block";
 
-      document.getElementById("id_private_section").style.display = "none";
-      // document.getElementById("id_private_section").style.display = "none";
+      if ($("#id_private_parts").length) {
+        document.getElementById("id_private_parts").style.display = "none";
+      }
+      // location.reload(true);
+      // document.getElementById("id_private_con").style.display = "none";
+      // console.log("not logged in" + user);
 
 
       // No user is signed in.
     }
   });
 });
-
-
 
 //if user is in session
 //SHOW
@@ -69,6 +86,10 @@ function login() {
   // window.alert("onclick button works");
   var user_email = document.getElementById("id_email").value;
   var user_password = document.getElementById("id_password").value;
+
+  
+  // document.getElementById("not_signed_in").innerHTML = "Not Signed in";
+  document.getElementById("not_signed_in").style.display = "none";
 
   // console.log("works");
   // console.log(user_email);
@@ -83,30 +104,20 @@ function login() {
     window.alert("Error Message: " + error.code + "  " + error.message);
   });
 
-  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
-  .then(function () {
-    // Existing and future Auth states are now persisted in the current
-    // session only. Closing the window would clear any existing state even
-    // if a user forgets to sign out.
-    // ...
-    // New sign-in will be persisted with session persistence.
-    return firebase.auth().signInWithEmailAndPassword(user_email, user_password);
-  })
-  .catch(function (error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-
-    window.alert("Error MSG: " + errorMessage);
-  });
+  document.getElementById("id_button").innerHTML = '<button onclick="logout()" id="id_signout">Logoff</button>';
 }
 
 function logout() {
   firebase.auth().signOut().then(function () {
     // Sign-out successful.
+  
+
+
   }).catch(function (error) {
     // An error happened.
   });
+
+  document.getElementById("not_signed_in").innerHTML = "Not Signed in";
 }
 
 function registerUser() {

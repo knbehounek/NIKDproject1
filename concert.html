@@ -38,18 +38,17 @@
                     <input type="password" name="password" id="id_password" placeholder="Password" />
                     <button onclick="login()">LOGIN</button>
                 </div>
-                <div></div>
 
-                <div class="text-white">
-                    <div id="is_signed_in"></div>
-                    <div id="not_signed_in"></div>
-                    <div></div>
-                    <div id="public_content"></div>
-                    <div id="member_content"></div>
-
-                    <div id="id_button"></div>
-                </div>
             </nav>
+            <div class="text-white" align="right">
+                <div id="is_signed_in"></div>
+                <div id="not_signed_in"></div>
+                <!-- <div></div>
+                        <div id="public_content"></div>
+                        <div id="member_content"></div> -->
+
+                <div id="id_button"></div>
+            </div>
         </div>
     </header>
 
@@ -84,25 +83,27 @@
                 </div>
             </div>
         </div>
-        <div class="row" id="id_private_section"></div>
-            <div class="card" id="eventsCard">
-                <div class="card-header">
-                    Current and Upcoming Events
-                </div>
-                <div class="card-body">
-                    <table class="table" id='eventsTable'>
-                        <thead>
-                            <tr>
-                                <th>Artist</th>
-                                <th>Genre</th>
-                                <th>Event Date</th>
-                                <th>Location</th>
-                                <th>Youtube Link</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+        <div id="id_private_parts">
+            <div class="row" id="id_private_parts">
+                <div class="card" id="eventsCard">
+                    <div class="card-header">
+                        Current and Upcoming Events
+                    </div>
+                    <div class="card-body">
+                        <table class="table" id='eventsTable'>
+                            <thead>
+                                <tr>
+                                    <th>Artist</th>
+                                    <th>Genre</th>
+                                    <th>Event Date</th>
+                                    <th>Location</th>
+                                    <th>Youtube Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
