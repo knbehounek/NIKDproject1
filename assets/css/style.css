@@ -92,7 +92,11 @@ header{
     flex-direction: column;
     margin: 10px 20px 0px 20px;
     align-items: unset;
-    justify-content: space-between;   
+    justify-content: space-between;  
+    /* padding-top: 100px;  */
+    border-bottom: black;
+    border-style: double;
+    border-width: 13px;
 
 }
 #movies{
