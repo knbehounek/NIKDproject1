@@ -1,8 +1,3 @@
-/* nav-link{
-    
-    color: aliceblue;
-} */
-
 
 body{
     background-image: url('../Images/congruent_outline.png'); 
@@ -20,7 +15,6 @@ header{
     background-color: transparent; 
  } 
 
-
  .card-header{
 
     background-color: lightgray;  
@@ -29,7 +23,6 @@ header{
     background-color: gray;  
 
 }
-
 
 #cardHeader {
     font-weight: bold;
@@ -92,7 +85,11 @@ header{
     flex-direction: column;
     margin: 10px 20px 0px 20px;
     align-items: unset;
-    justify-content: space-between;   
+    justify-content: space-between;  
+    /* padding-top: 100px;  */
+    border-bottom: black;
+    border-style: double;
+    border-width: 13px;
 
 }
 #movies{
@@ -168,12 +165,8 @@ margin-bottom: 15px;
     /* float: left; */
     overflow-y: scroll;
     justify-content: center;
-
     padding: 0; 
-
     padding: 0;
-    
-
 }
 
 .movieResults{
@@ -208,7 +201,6 @@ margin-bottom: 15px;
 #concertOptions {
     width: 100%; 
     margin-bottom: 20px;
-
 }
 
 #eventsCard{
@@ -226,8 +218,6 @@ margin-bottom: 15px;
     overflow-x: auto;
   }
 
-
-
 footer {
     margin-top: 30px;
     color: floralwhite;
@@ -236,7 +226,6 @@ footer {
     width: 100%;
     text-align: center;
     border: solid grey 2px;
-
 } 
 #loginButton:hover{
     padding: 5px;
@@ -264,3 +253,5 @@ footer {
     border: solid 2px aliceblue;
     background-color: rgb(49, 49, 49); 
 }
+
+
