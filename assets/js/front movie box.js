@@ -379,7 +379,7 @@ $(document).ready(function () {
        console.log(movierelease);
        console.log(movieoverview);
 
-       $("#moviedata").append("<tr><td>" + movietitle + "</td><td>" + movierating + "</td><td>" + movierelease + "</td><td>" + movieoverview+ "</td><td>");
+       
 
        firebase.database().ref('movies').push({
          movietitle: movietitle,
@@ -490,7 +490,15 @@ $(document).ready(function () {
   })
 
  
+  firebase.database().ref("movies").on("child_added", function (snapshot) {
 
+        movietitle = snapshot.val().movietitle;
+        movierating = snapshot.val().movierating;
+        movierelease = snapshot.val().movierelease;
+        movieoverview = snapshot.val().movieoverview;
+
+        $("#moviedata").append("<tr><td>" + movietitle + "</td><td>" + movierating + "</td><td>" + movierelease + "</td><td>" + movieoverview+ "</td><td>");
+    });
 
 
 

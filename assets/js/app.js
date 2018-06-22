@@ -10,16 +10,16 @@ var config = {
   };
   firebase.initializeApp(config);
 
-// Initialize Firebase
-// var config = {
-//   apiKey: "AIzaSyAQtac_UMR5O5DxdsSlSKJTOXghT_lyLPI",
-//   authDomain: "gualafon-9f430.firebaseapp.com",
-//   databaseURL: "https://gualafon-9f430.firebaseio.com",
-//   projectId: "gualafon-9f430",
-//   storageBucket: "gualafon-9f430.appspot.com",
-//   messagingSenderId: "944780830840"
-// };
-// firebase.initializeApp(config);
+Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAQtac_UMR5O5DxdsSlSKJTOXghT_lyLPI",
+  authDomain: "gualafon-9f430.firebaseapp.com",
+  databaseURL: "https://gualafon-9f430.firebaseio.com",
+  projectId: "gualafon-9f430",
+  storageBucket: "gualafon-9f430.appspot.com",
+  messagingSenderId: "944780830840"
+};
+firebase.initializeApp(config);
 
 
 
