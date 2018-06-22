@@ -1,25 +1,25 @@
 // Initialize Firebase
 
-// var config = {
-//     apiKey: "AIzaSyBbukVkHU7qdQYVs-Raj2DlPA9t9s1YlO4",
-//     authDomain: "nikd-67dbe.firebaseapp.com",
-//     databaseURL: "https://nikd-67dbe.firebaseio.com",
-//     projectId: "nikd-67dbe",
-//     storageBucket: "nikd-67dbe.appspot.com",
-//     messagingSenderId: "1041995690239"
-//   };
-//   firebase.initializeApp(config);
+var config = {
+    apiKey: "AIzaSyBbukVkHU7qdQYVs-Raj2DlPA9t9s1YlO4",
+    authDomain: "nikd-67dbe.firebaseapp.com",
+    databaseURL: "https://nikd-67dbe.firebaseio.com",
+    projectId: "nikd-67dbe",
+    storageBucket: "nikd-67dbe.appspot.com",
+    messagingSenderId: "1041995690239"
+  };
+  firebase.initializeApp(config);
 
 // Initialize Firebase
-var config = {
-  apiKey: "AIzaSyAQtac_UMR5O5DxdsSlSKJTOXghT_lyLPI",
-  authDomain: "gualafon-9f430.firebaseapp.com",
-  databaseURL: "https://gualafon-9f430.firebaseio.com",
-  projectId: "gualafon-9f430",
-  storageBucket: "gualafon-9f430.appspot.com",
-  messagingSenderId: "944780830840"
-};
-firebase.initializeApp(config);
+// var config = {
+//   apiKey: "AIzaSyAQtac_UMR5O5DxdsSlSKJTOXghT_lyLPI",
+//   authDomain: "gualafon-9f430.firebaseapp.com",
+//   databaseURL: "https://gualafon-9f430.firebaseio.com",
+//   projectId: "gualafon-9f430",
+//   storageBucket: "gualafon-9f430.appspot.com",
+//   messagingSenderId: "944780830840"
+// };
+// firebase.initializeApp(config);
 
 
 

@@ -380,6 +380,13 @@ $(document).ready(function () {
        console.log(movieoverview);
 
        $("#moviedata").append("<tr><td>" + movietitle + "</td><td>" + movierating + "</td><td>" + movierelease + "</td><td>" + movieoverview+ "</td><td>");
+
+       firebase.database().ref('movies').push({
+         movietitle: movietitle,
+         movierating: movierating,
+         movierelease: movierelease,
+         movieoverview: movieoverview
+       });
         
       })
     })
